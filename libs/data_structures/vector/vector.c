@@ -89,9 +89,8 @@ void popBack(vector *v) {
     if (isEmpty(v)) {
         fprintf(stderr, "bad alloc");
         exit(1);
-    } else {
+    } else
         v->size--;
-    }
 }
 
 void test_popBack_notEmptyVector() {
@@ -123,7 +122,7 @@ int *front(vector *v) {
 
 void test_atVector_notEmptyVector() {
     vector v = createVector(12);
-    for (int i = 0; i <= 11; i++)
+    for (int i = 0; i < 12; i++)
         v.data[i] = i;
     v.size = 12;
     int *a = atVector(&v, 6);
@@ -132,7 +131,7 @@ void test_atVector_notEmptyVector() {
 
 void test_atVector_requestToLastElement() {
     vector v = createVector(15);
-    for (int i = 0; i <= 14; i++)
+    for (int i = 0; i < 15; i++)
         v.data[i] = i;
     v.size = 15;
     int *a = atVector(&v, 14);

@@ -41,12 +41,27 @@ void pushBack(vector *v, int x);
 // удаляет последний элемент из вектора v
 void popBack(vector *v);
 
+// Возвращает указатель на index-ый элемент вектора v
+int* atVector(vector *v, size_t index);
+
+// Возвращает указатель на последний элемент вектора v
+int* back(vector *v);
+
+// Возвращает указатель на нулевой элемент вектора v
+int* front(vector *v);
+
 void test_pushBack_emptyVector();
 
 void test_pushBack_fullVector();
 
 void test_popBack_notEmptyVector();
 
+void test_atVector_notEmptyVector();
 
+void test_atVector_requestToLastElement();
+
+void test_back_oneElementInVector();
+
+void test_front_oneElementInVector();
 
 #endif //LAB_19_VECTOR_H

@@ -1,6 +1,9 @@
-#include <stdio.h>
+#include "libs/data_structures/vector/vector.h"
+
 
 int main() {
-    printf("Hello, World!\n");
+    vector v = createVector(12);
+    deleteVector(&v);
+
     return 0;
 }
